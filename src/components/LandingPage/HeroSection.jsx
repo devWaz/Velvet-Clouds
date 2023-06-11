@@ -47,7 +47,7 @@ const HeroSection = () => {
                                         )
                             }
                         </p>
-                        <h1 className="text-[5.7rem] md:text-[7rem] lg:text-[8rem] md:leading-[6.5rem] lg:leading-[7.5rem]">{
+                        <h1 className="text-[5.7rem] md:text-[7rem] lg:text-[7.5rem] md:leading-[6.5rem] lg:leading-[7.5rem]">{
                                 text1.map( (phrase, index) => {
                                     return <div key={index} className='lineMask' >
                                                 <motion.div 
