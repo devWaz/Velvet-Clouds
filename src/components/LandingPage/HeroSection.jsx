@@ -3,7 +3,7 @@ import down from '../../assets/images/down.svg'
 import lines from '../../assets/images/pattern.svg'
 import Navbar from './Navbar'
 
-import { useRef , useEffect } from 'react'
+import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
 
 const HeroSection = () => {

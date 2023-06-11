@@ -14,9 +14,9 @@ body {
   scroll-behavior: smooth;
 }
 
-/* *::-webkit-scrollbar{
+*::-webkit-scrollbar{
   display: none;
-} */
+}
 
 .red {
   border: 1px solid red;
