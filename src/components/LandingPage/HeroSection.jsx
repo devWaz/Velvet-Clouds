@@ -16,11 +16,11 @@ const HeroSection = () => {
     ]
 
     const body = useRef(null)
-    const isInView = useInView(body, {once:true, margin: '75%'})
+    const isInView = useInView(body, {once:false , margin: '75%'})
 
     const animate = {
         initial: {y: '100%'},
-        open: (i) => ({y: "0%", transition: {duration: 0.55, ease: [0.33, 1, 0.68, 1],  delay: 0.5 * i}})
+        open: (i) => ({y: "0%", transition: {duration: 1, ease: [0.6, 0.01, -0.05, 0.9],  delay: 0.7 * i}})
     }
 
     return ( 
