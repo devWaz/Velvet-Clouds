@@ -35,11 +35,11 @@ const Schedules = () => {
     return ( 
         <section className="relative">
 
-            <div className='p-5 py-[5rem] lg:py-[4rem] lg:pl-[15%] text-white flex flex-col gap-5 lg:w-[60%] lg:flex-row lg:m-auto relative'>
-                <div className='lg:-rotate-90 lg:absolute lg:top-[200px] lg:left-[-10px] h-[62px] w-[300px] lg:w-[345px] lg:h-[70px]'>
+            <div className='p-5 py-[5rem] md:py-[4rem] lg:py-[4rem] lg:pl-[30%] text-white flex flex-col gap-5 lg:w-[80%] lg:flex-row lg:m-auto relative'>
+                <div className='lg:-rotate-90 lg:absolute lg:top-[200px] lg:left-[80px] xl:left-[230px] h-[62px] w-[300px] lg:w-[345px] lg:h-[70px]'>
                     <img src={schedule} alt="" className='w-full h-full'/>
                 </div>
-                <ul className='min-h-[50vh]'>
+                <ul className='min-h-[50vh] md:min-h-[30vh] lg:w-[100%]'>
                     {
                         Dates.map((date , index) => {
                             return <li key={index} className='py-3 uppercase flex flex-col gap-2 md:flex-row md:justify-between md:items-center

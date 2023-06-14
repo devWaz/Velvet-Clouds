@@ -1,6 +1,6 @@
 import lines from '../../assets/images/pattern2.svg'
 import info from '../../assets/images/INFO.svg'
-import { text , join } from '../../utiils/texts'
+import { text , join , step} from '../../utiils/texts'
 
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
@@ -43,7 +43,7 @@ const InfoSection = () => {
             </div>
 
             <div className='p-5 py-[5rem] lg:py-[6rem] text-white flex flex-col gap-5 lg:w-[60%] lg:flex-row lg:m-auto relative'>
-                <div className='lg:-rotate-90 lg:absolute lg:top-[150px] lg:left-[-110px] h-[62px] w-[135px] lg:w-[154px] lg:h-[70pxpx]'>
+                <div className='lg:-rotate-90 lg:absolute lg:top-[150px] lg:left-[-110px] h-[62px] w-[135px] lg:w-[154px] lg:h-[70px]'>
                     <img src={info} alt="" className='w-full h-full'/>
                 </div>
                 <div>
@@ -61,7 +61,7 @@ const InfoSection = () => {
                                     )
                             }
                     </motion.h3>
-                    <p className='text-[18px] lg:text-[20px] lg:leading-[28px] mt-10'>
+                    <motion.p className='text-[18px] lg:text-[20px] lg:leading-[28px] mt-10'>
                         {
                             join.map( (phrase, index) => {
                                 return <motion.div key={index} variants={firstName} className='lineMask' >
@@ -75,9 +75,19 @@ const InfoSection = () => {
                                     )
                             }
                         <br />
-                        Step into a world where music transcends boundaries and transports you to realms unknown. Through their latest album and timeless 
-                        favorites, Velvet Clouds will captivate your senses, evoking powerful emotions and leaving an indelible mark on your soul.
-                    </p>
+                        {
+                            step.map( (phrase, index) => {
+                                return <motion.div key={index} variants={firstName} className='lineMask' >
+                                            <motion.div 
+                                            custom={index} 
+                                            variants={letter} 
+                                            initial='initial' 
+                                            animate={isInView ? "open" : ""}>{phrase}</motion.div>
+                                        </motion.div>
+                                        }
+                                    )
+                            }
+                    </motion.p>
                 </div>
             </div>
         </section>
